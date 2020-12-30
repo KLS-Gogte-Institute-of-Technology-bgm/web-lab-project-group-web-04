@@ -30,7 +30,7 @@
 		<h3>Login</h3><hr/>
  
 		<form ng-app="myApp" ng-controller="validateCtrl" 
-name="myForm" novalidate>
+name="myForm" novalidate action="ScholarShip.html">
 		  <strong>User Name :</strong><br>
 		  <input type="email" name="email" ng-model="email" required>
 <span style="color:white" ng-show="myForm.email.$dirty && myForm.email.$invalid"><br>
@@ -39,11 +39,10 @@ name="myForm" novalidate>
  
 		   <strong>Password :</strong><br>
 		  <input type="password" name="password" id="password"/><br>
+              <input type="submit" id="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
+myForm.email.$dirty && myForm.email.$invalid" value="Login"><!/button>
+          
  		</form>
-		  <a href="ScholarShip.html">
-              <button id="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
-myForm.email.$dirty && myForm.email.$invalid">Login</button>
-          </a>
 	  </div>
 </div>
 
